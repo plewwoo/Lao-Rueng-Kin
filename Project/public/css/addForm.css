@@ -1,0 +1,133 @@
+.center-text-h4 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+
+.button-form-add {
+  font-size: 16px;
+  padding: 5px 32px;
+  background-color: salmon;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.button-form-addImg{
+  font-size: 16px;
+  padding: 5px 32px;
+  background-color: salmon;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.main-container {
+  width: 100%;
+  margin: auto;
+}
+
+.restaurant-wrapper-4 {
+  box-sizing: border-box;
+  margin: 10px auto;
+  padding: 30px;
+  width: 1500px;
+  background-color: white;
+  border-radius: 6px;
+}
+
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-center form {
+  width: 80%;
+}
+
+.restaurant-wrapper-4 input {
+  font-size: 16px;
+  padding: 4px 8px;
+  border-radius: 18px;
+  outline: none;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  border: 1px solid rgb(170, 170, 170);
+}
+
+.restaurant-wrapper-4 .datetime input {
+  font-size: 16px;
+  padding: 4px 8px;
+  border-radius: 18px;
+  outline: none;
+  width: calc(100% / 3.025);
+  margin-bottom: 10px;
+  border: 1px solid rgb(170, 170, 170);
+}
+
+.datetime .date{
+  display: inline-block;
+  width: calc(100% / 3.025);
+}
+
+.datetime .date input{
+  width: 100%;
+}
+
+.restaurant-wrapper-4 select {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 8px;
+  width: 40%;
+  border-radius: 18px;
+  padding: 4px 8px;
+  outline: none;
+  border: 1px solid rgb(170, 170, 170);
+}
+
+.restaurant-wrapper-4 p {
+  font-weight: 300;
+}
+
+.restaurant-wrapper-4 label {
+  font-weight: 300;
+}
+
+.center-text {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.flex-select {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-flex-select {
+  width: 100%;
+}
+.list-flex-select:nth-child(1) {
+  padding-right: 10px;
+}
+
+.list-flex-select select {
+  width: 100%;
+  border: 1px solid rgb(170, 170, 170);
+}
+
+.red-font {
+  color: red;
+}
+
+.salmon-font {
+  color: salmon;
+}

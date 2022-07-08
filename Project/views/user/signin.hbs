@@ -1,0 +1,64 @@
+<body>
+  <div class="page">
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext dot"></div>
+        <div class="pic_slide1"></div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext dot"></div>
+        <div class="pic_slide2"></div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext dot"></div>
+        <div class="pic_slide3"></div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext dot"></div>
+        <div class="pic_slide4"></div>
+      </div>
+    </div>
+
+    <div class="form">
+      <div class="button_form">
+        <div>
+          <a href="/signinPage"><button
+              class="list_button_form_login1"
+            >เข้าสู่ระบบ</button></a>
+          <a href="/signupPage"><button
+              class="list_button_form_login2"
+            >สมัครสมาชิก</button></a>
+        </div>
+      </div>
+      <form action="/signin" method="POST" class="form_text">
+        <div>
+          <h1>เข้าสู่ระบบ</h1>
+          <p>Username</p>
+          <input
+            type="text"
+            placeholder="Username"
+            class="box_form"
+            id="username"
+            name="username"
+            required
+          />
+          <p>Password</p>
+          <input
+            type="password"
+            placeholder="Password"
+            class="box_form"
+            id="password"
+            name="password"
+            required
+          />
+        </div>
+        <div class="button_form">
+          <button type="submit" class="submit-btn">เข้าสู่ระบบ</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="/javascript/slide.js"></script>
+
+</body>

@@ -1,0 +1,104 @@
+<div class="main-container">
+  <div class="restaurant-wrapper-4">
+    <h1 class="center-text salmon-font">เพิ่มร้านอาหาร</h1>
+    <h4
+      class="center-text-h4"
+    >กรุณากรอกข้อมูลให้ละเอียดและถูกต้องจะทำให้ผู้ใช้งานเว็บไซต์คนอื่นๆหาร้านของคุณเจอได้ง่ายขึ้น</h4>
+    <div class="flex-center">
+      <form action="/insertRestaurant" method="POST">
+        <h3>ข้อมูลพื้นฐาน</h3>
+        <p>ชื่อร้าน<span class="red-font">*</span></p>
+        <input type="text" name="name" required />
+        <br />
+        <label for="category">หมวดหมู่<span class="red-font">*</span> :</label>
+        <select name="category" id="category">
+          <option value="Shabu">ชาบู</option>
+          <option value="Yakiniku">ปิ้งย่าง</option>
+          <option value="Sushi">ซูชิ</option>
+          <option value="Buffet">ร้านอาหาร</option>
+          <option value="Dessert">ขนมหวาน</option>
+        </select>
+        <p>ราคา<span class="red-font">*</span></p>
+        <input type="text" name="price" required/>
+        <h3>สถานที่</h3>
+        <p>ที่อยู่<span class="red-font">*</span></p>
+        <input type="text" name="address" required/>
+        <p>แผนที่ (Google Map)<span class="red-font">*</span></p>
+        <input type="text" name="map" required/>
+        <h3>ข้อมูลเพิ่มเติม</h3>
+        <p>เวลาให้บริการ</p>
+
+        <div class="datetime">
+          <div class="date">
+            <p>วัน<span class="red-font">*</span></p>
+            <input type="text" placeholder="จันทร์ - อาทิตย์" name="openDate" required/>
+          </div>
+          <div class="date">
+            <p>เวลาเปิด<span class="red-font">*</span></p>
+            <input type="text" placeholder="8:00" name="openTime" required/>
+          </div>
+          <div class="date">
+            <p>เวลาปิด<span class="red-font">*</span></p>
+             <input type="text" placeholder="24:00" name="closeTime" required/>
+          </div>
+        </div>
+
+        <p>รูปภาพ<span class="red-font">*</span></p>
+        <input type="text" name="imgUrl" required/>
+
+        <div class="flex-select">
+          <div class="list-flex-select">
+            <label for="drink">รวมเครื่องดื่ม<span
+                class="red-font"
+              >*</span></label>
+
+            <select name="drink" id="drink">
+              <option value="รวมเครื่องดื่ม">รวมเครื่องดื่ม</option>
+              <option value="ไม่รวมเครื่องดื่ม">ไม่รวมเครื่องดื่ม</option>
+            </select>
+          </div>
+          
+          <div class="list-flex-select">
+            <label for="isTimeLimit">จำกัดเวลา<span
+                class="red-font"
+              >*</span></label>
+            <select name="isTimeLimit" id="isTimeLimit">
+              <option value="จำกัดเวลา">จำกัดเวลา</option>
+              <option value="ไม่จำกัดเวลา">ไม่จำกัดเวลา</option>
+            </select>
+          </div>
+        </div>
+
+        <p>เวลาที่จำกัด</p>
+        <input type="text" name="timeLimit" />
+
+        <p>เบอร์โทร<span class="red-font">*</span></p>
+        <input type="text" name="tel" required/>
+
+        <p>รายละเอียด<span class="red-font">*</span></p>
+        <input type="text" name="details" required/>
+
+        <br />
+
+        <div id="img-input">
+          <p>รูปภาพเพิ่มเติม (อย่างน้อย 2 รูป)<span class="red-font">*</span></p>
+          <input type="text" name="img" required/>
+          <input type="text" name="img" required/>
+        </div>
+        <button class="button-form-addImg" type="button" onclick="addImg()">Add Image</button>
+        
+        
+        <button class="button-form-add" type="submit">เพิ่มร้านอาหาร</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  function addImg() {
+  var x = document.createElement("INPUT");
+  x.setAttribute("type", "text");
+  x.setAttribute("name", "img");
+  document.getElementById('img-input').appendChild(x);
+}
+</script>

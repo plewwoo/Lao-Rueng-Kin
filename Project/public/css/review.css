@@ -1,0 +1,75 @@
+.review-container {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.restaurant-wrapper-5 {
+  box-sizing: border-box;
+  margin: 10px auto;
+  padding: 30px;
+  width: 1500px;
+  border-radius: 6px;
+}
+
+.restaurant-desc-1 {
+  max-width: 1500px;
+}
+
+.restaurant-desc-1 .star {
+  padding: 0 10px;
+  margin: 10px 0;
+}
+
+.restaurant-desc-1 .star i{
+  color: rgb(255, 208, 0);
+}
+
+.restaurant-desc-1 .star span{
+  font-weight: 500;
+  color: black;
+}
+
+.restaurant-desc-1 .star input {
+  cursor: pointer;
+}
+
+.textarea-cmt {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.restaurant-desc-1 form .comment {
+  box-sizing: border-box;
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 18px;
+  outline: none;
+  width: 100%;
+  margin-bottom: 10px;
+  border: 1px solid rgb(170, 170, 170);
+  resize: none;
+}
+
+.review i {
+  color: rgb(255, 208, 0);
+}
+
+.review-button {
+  text-align: end;
+  padding: 0 10px;
+}
+
+.review-btn {
+  font-size: 16px;
+  padding: 5px 32px;
+  background-color: salmon;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.restaurant-desc .review p {
+  padding: 5px 10px;
+}

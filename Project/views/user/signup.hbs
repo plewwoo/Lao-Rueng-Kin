@@ -1,0 +1,77 @@
+<body>
+  <div class="page">
+
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext dot"></div>
+        <div class="pic_slide1"></div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext dot"></div>
+        <div class="pic_slide2"></div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext dot"></div>
+        <div class="pic_slide3"></div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext dot"></div>
+        <div class="pic_slide4"></div>
+      </div>
+    </div>
+
+    <div class="form">
+      <div class="button_form">
+        <div>
+          <a href="/signinPage"><button
+              class="list_button_form1"
+            >เข้าสู่ระบบ</button></a>
+          <a href="/signupPage"><button
+              class="list_button_form2"
+            >สมัครสมาชิก</button></a>
+        </div>
+      </div>
+
+      <form action="/signup" method="POST" class="form_text">
+        <div>
+          <h1>สมัครสมาชิก</h1>
+          <p>Username</p>
+          <input
+            type="text"
+            placeholder="Username"
+            class="box_form"
+            id="username"
+            name="username"
+            pattern="[A-Za-z0-9]{3,}"
+            required
+          />
+          <p>Email</p>
+          <input
+            type="email"
+            placeholder="Email"
+            class="box_form"
+            id="E-mail"
+            name="email"
+            required
+          />
+          <p>Password</p>
+          <input
+            type="password"
+            placeholder="Password"
+            class="box_form"
+            id="password"
+            name="password"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+            title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+            required
+          />
+        </div>
+        <div class="button_form">
+          <button type="submit" class="submit-btn">สมัครสมาชิก</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="/javascript/slide.js"></script>
+</body>

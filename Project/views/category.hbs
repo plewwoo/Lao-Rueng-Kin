@@ -1,0 +1,90 @@
+<div class="main-container">
+  <div class="category">
+    <div class="category-img">
+      <img class="pic1" src="img/shabu.jpg" />
+      <img class="pic1" src="img/yakiniku.jpg" />
+      <img class="pic1" src="img/sushi.jpg" />
+      <img class="pic1" src="img/buffet.jpg" />
+      <img class="pic1" src="img/dessert.jpg" />
+
+      <img class="pic2" src="img/shabu.jpg" />
+      <img class="pic2" src="img/yakiniku.jpg" />
+      <img class="pic2" src="img/sushi.jpg" />
+      <img class="pic2" src="img/buffet.jpg" />
+      <img class="pic2" src="img/dessert.jpg" />
+
+      <img class="pic3" src="img/shabu.jpg" />
+      <img class="pic3" src="img/yakiniku.jpg" />
+      <img class="pic3" src="img/sushi.jpg" />
+      <img class="pic3" src="img/buffet.jpg" />
+      <img class="pic3" src="img/dessert.jpg" />
+    </div>
+
+    <div class="category-btn">
+      <a href="/shabu"><button><img src="img/shabuicon.png" />Shabu</button></a>
+      <a href="/yakiniku"><button><img
+            src="img/yakinikuicon.png"
+          />Yakiniku</button></a>
+      <a href="/sushi"><button><img src="img/sushiicon.png" />Sushi</button></a>
+      <a href="/buffet"><button><img
+            src="img/buffeticon.png"
+          />Buffet</button></a>
+      <a href="/dessert"><button><img
+            src="img/desserticon.png"
+          />Dessert</button></a>
+    </div>
+  </div>
+
+  <div class="filter">
+    <form action="/filter" method="POST" novalidate>
+
+      <label for="price">ราคา :</label>
+      <select name="price" id="price">
+        <option value="0 AND 9999">ทั้งหมด</option>
+        <option value="0 AND 299">0 - 299 บาท</option>
+        <option value="300 AND 499">300 - 499 บาท</option>
+        <option value="500 AND 9999">500+ บาท</option>
+      </select>
+
+      <label for="drink">รวมเครื่องดื่ม :</label>
+      <select name="drink" id="drink">
+        <option
+          value="รวมเครื่องดื่ม' OR water = 'ไม่รวมเครื่องดื่ม"
+        >รวม/ไม่รวมเครื่องดื่ม</option>
+        <option value="รวมเครื่องดื่ม">รวมเครื่องดื่ม</option>
+        <option value="ไม่รวมเครื่องดื่ม">ไม่รวมเครื่องดื่ม</option>
+      </select>
+
+      <label for="isTimeLimit">จำกัดเวลา :</label>
+      <select name="isTimeLimit" id="isTimeLimit">
+        <option
+          value="จำกัดเวลา' OR isTimeLimit = 'ไม่จำกัดเวลา"
+        >จำกัดเวลา/ไม่จำกัดเวลา</option>
+        <option value="จำกัดเวลา">จำกัดเวลา</option>
+        <option value="ไม่จำกัดเวลา">ไม่จำกัดเวลา</option>
+      </select>
+
+      <button type="submit" value="Submit"> ค้นหา </button>
+    </form>
+  </div>
+
+  {{#each restaurant}}
+    <div class="restaurant-wrapper">
+      <div class="recommend-restaurant">
+        <div class="restaurant">
+          <img src="{{imgUrl}}" />
+          <div class="restaurant-datails">
+            <a href="/{{id}}"><h1>{{this.name}}</h1></a>
+            <p>เริ่มต้นที่ราคา {{price}} บาท</p>
+            <br />
+            <p>เปิดทุกวัน {{openDate}}</p>
+            <p>เวลา {{openTime}} - {{closeTime}} น.</p>
+            <p>{{details}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
+
+<script src="/javascript/slideShow.js"></script>

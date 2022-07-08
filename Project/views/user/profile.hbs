@@ -1,0 +1,100 @@
+<div class="main-container">
+  <div class="profile-wrapper">
+      <div class="posted-restaurant">
+        {{#if addRestaurant}}
+        <h1>Restaurant Added</h1>
+        <table>
+           <tr>
+             <th class="th-1">Restaurant</th>
+             <th class="th-2">User</th>
+             <th class="th-2">Status</th>
+           </tr>
+           {{#if isAdmin}}
+           {{#each restaurant}}
+           <tr>
+              <td><a href="/{{restaurant_id}}"> {{name}}</a></td>
+              <td>{{username}}</td>
+              <td><a href="/updateStatus/{{restaurant_id}}"><button class="status">{{status}}</button></a></td>
+              {{/each}}
+            {{else}}
+            {{#each restaurant}}
+              <td><a href="/{{restaurant_id}}">{{name}}</a></td>
+              <td>{{username}}</td>
+              <td><button
+               class="status">{{status}}</button></td>
+           </tr>
+           {{/each}}
+           {{/if}}
+        </table>
+
+        {{else}}
+        <h1>Restaurant</h1>
+        <p>No Restaurant Added</p>
+        {{/if}}
+      </div>
+    
+    {{#if addRestaurant}}
+      {{#each restaurant}}
+        <div class="userInfo">
+          <h1>Profile</h1>
+          <p>Username : {{username}}</p>
+          <p>Email : {{email}}</p>
+        </div>
+        <div class="hidden">
+            {{/each}}
+        </div>
+    
+    {{else}}
+
+      {{#each profile}}
+        <div class="userInfo">
+          <h1>Profile Info</h1>
+          <p>Username : {{username}}</p>
+          <p>Email : {{email}}</p>
+        </div>
+      {{/each}}
+    {{/if}}
+
+  </div>
+</div>
+
+
+<script>
+window.onload = start();
+
+function start(){
+  changeColor();
+}
+
+function changeColor() {
+var status = document.getElementsByClassName('status');
+
+for(i = 0; i <= status.length; i++){
+  if(status[i].innerHTML === 'Approve'){
+      status[i].style.backgroundColor="#04aa6d";
+      console.log(status[i].innerHTML)
+    }
+
+    else{
+      status[i].style.backgroundColor="#F29339";
+      console.log(status[i].innerHTML)
+    }
+  }
+}
+</script>
+
+{{!-- function changeButtonColor(){
+  var btnColor = document.getElementsByClassName('status-button');
+  console.log(btnColor)
+
+  for(i = 0; i <= btnColor.length; i++){
+    if(btnColor[i].innerHTML === 'Approve'){
+      btnColor[i].style.backgroundColor ="#04aa6d";
+      console.log(btnColor[i].innerHTML)
+    }
+    else{
+      btnColor[i].style.backgroundColor ="#F29339";
+      console.log(btnColor[i].innerHTML)
+    }
+  } 
+} --}}

@@ -1,0 +1,65 @@
+<div class="main-container">
+  <div class="restaurant-wrapper-5">
+    <div class="review-container">
+      <div class="review-container-2">
+        <div class="restaurant-desc-1">
+          <form action="/addComment" method="POST">
+            <h2>Review</h2>
+            <div class="star">
+              <label for="star5" title="text">
+                <i class="fas fa-star"><span>5</span></i></label>
+              <input type="radio" id="star5" name="star" value="5" required />
+              <label for="star4" title="text">
+                <i class="fas fa-star"><span>4</span></i></label>
+              <input type="radio" id="star4" name="star" value="4" required />
+              <label for="star3" title="text">
+                <i class="fas fa-star"><span>3</span></i></label>
+              <input type="radio" id="star3" name="star" value="3" required />
+              <label for="star2" title="text">
+                <i class="fas fa-star"><span>2</span></i></label>
+              <input type="radio" id="star2" name="star" value="2" required />
+              <label for="star1" title="text">
+                <i class="fas fa-star"><span>1</span></i></label>
+              <input type="radio" id="star1" name="star" value="1" required />
+            </div>
+
+            <div class="textarea-cmt">
+              <p>Comment</p>
+              <textarea class="comment" rows="3" name="comment"></textarea>
+            </div>
+
+            <div class="review-button">
+              <button type="submit" class="review-btn">Submit</button>
+            </div>
+          </form>
+        </div>
+
+        {{#each restaurant}}
+          <div class="restaurant-desc">
+            <div class="review">
+              <p>{{username}}</p>
+              <p><i class="fas fa-star"></i> {{star}}</p>
+              <p>{{comment}}</p>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+
+      <div class="detail-btn">
+        <a href="/{{restaurant_id}}"><button
+            class="button-gray"
+          >รายละเอียด</button></a>
+        <a href="/review/{{restaurant_id}}"><button class="button-salmon">รีวิว
+            & คอมเมนต์</button></a>
+      </div>
+
+      <div class="hidden">
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function addComment(){ alert('Review Added') }
+</script>

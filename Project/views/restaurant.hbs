@@ -1,0 +1,52 @@
+<div class="main-container">
+    <div class="restaurant-wrapper-2">
+        <div class="recommend-restaurant">
+            <div class="restaurant-img-box">
+                {{#each restaurant}}
+                    <img src="{{img}}">
+                {{/each}}
+            </div>
+
+            {{#each restaurant}}
+            <div class="detail-btn">
+                <a href="/{{restaurant_id}}"><button class="button-salmon">รายละเอียด</button></a>
+                <a href="/review/{{restaurant_id}}"><button class="button-gray">รีวิว & คอมเมนต์</button></a>
+            </div>
+            <div class="restaurantId">
+                <div class="restaurant-details-1">
+                    <div class="restaurant-desc-1">
+                        <h2>{{name}}</h2>
+                        <p><i class="fas fa-star" ></i> {{avgStar}}</p>
+                        <p>หมวดหมู่ {{category}}</p>
+                        <p>เริ่มต้นที่ราคา {{price}} บาท</p>
+                    </div>
+                    <div class="restaurant-desc">
+                        <h2>รายละเอียด</h2>
+                        <p>{{details}}</p>
+                    </div>
+                    <div class="restaurant-desc">
+                        <h2>สถานที่และเส้นทาง</h2>
+                        <div class="restaurant-map">
+                            <iframe src="{{map}}" width="300" height="300" allowfullscreen="" loading="lazy"></iframe>
+                            <p>{{address}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="restaurant-details-2">
+                     <div class="restaurant-desc-2">
+                        <h2>ข้อมูลร้าน</h2>
+                        <p>เวลาเปิด - ปิดร้าน </p>
+                        <p>{{openDate}} {{openTime}} - {{closeTime}} น.</p>
+                        <p>{{water}}</p>
+                        <p>เวลา</p>
+                        <p>{{isTimeLimit}} {{timeLimit}}</p>
+                        <p>เบอร์โทร : {{tel}}</p>
+                    </div>
+                </div>
+                <div class="hidden">
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

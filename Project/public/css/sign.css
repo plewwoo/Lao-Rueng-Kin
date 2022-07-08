@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Prompt", sans-serif;
+}
+
+.mySlides {
+  display: none;
+}
+
+.page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background-color: white;
+}
+
+.slideshow-container {
+  width: 120%;
+}
+
+.mySlides {
+  height: 100%;
+}
+
+.pic_slide1 {
+  width: 100%;
+  height: 100%;
+  background-image: url(/image/mysql-database-web-development-computer-software-dolphin.jpg);
+  background-position: center center;
+}
+.pic_slide2 {
+  width: 100%;
+  height: 100%;
+  background-image: url(/image/MG_0645.jpg);
+}
+.pic_slide3 {
+  width: 100%;
+  height: 100%;
+  background-image: url(/image/dFQROr7oWzulq5FZXlf9h25JFr6Xchb2OwYrVtgFbDRvA0L3veHFor9sNu2Bt38FoOO.jpg);
+  background-position: center center;
+}
+.pic_slide4 {
+  width: 100%;
+  height: 100%;
+  background-image: url(/image/DSC_5909-copy.jpg);
+}
+
+.form {
+  width: 100%;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form_text {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.button_form {
+  text-align: right;
+}
+
+.list_button_form1 {
+  background-color: rgb(143, 143, 143);
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px 0 0 10px;
+}
+
+.list_button_form_login1 {
+  background-color: salmon;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px 0 0 10px;
+}
+
+.list_button_form2 {
+  background-color: salmon;
+  color: white;
+  font-size: 16px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 0px 10px 10px 0px;
+}
+
+.list_button_form_login2 {
+  background-color: rgb(143, 143, 143);
+  color: white;
+  font-size: 16px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 0px 10px 10px 0px;
+}
+
+.button_form button{
+  cursor: pointer;
+}
+
+.submit-btn {
+  background-color: salmon;
+  color: white;
+  font-size: 16px;
+  padding: 10px 50px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.box_form {
+  color: salmon;
+  font-size: 18px;
+  width: 80%;
+  padding: 10px 15px;
+  border-radius: 50px;
+  border: 1px solid salmon;
+  outline: none;
+}
+
+.box_form::placeholder {
+  color: salmon;
+}
+
+h1 {
+  font-size: 30px;
+  color: salmon;
+}

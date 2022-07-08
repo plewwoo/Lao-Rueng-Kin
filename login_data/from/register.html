@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@200;300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page">
+
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <div class="numbertext dot"></div>
+                <div class="pic_slide1"></div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext dot"></div>
+                <div class="pic_slide2"></div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext dot"></div>
+                <div class="pic_slide3"></div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext dot"></div>
+                <div class="pic_slide4"></div>
+            </div>
+        </div>
+        
+        <div class="from">
+            <div class="button_from">
+                <div>
+                <a href="login.html"><button class="list_button_from1">เข้าสู่ระบบ</button></a>
+                <a href="register.html"><button class="list_button_from2">สมัครสมาชิก</button></a>
+                </div>
+            </div>
+            <div>
+                <h1>สมัครสมาชิก</h1>
+                <p>ชื่อ</p>
+                <input type="text" placeholder="ชื่อ *" class="box_from" id="username">
+                <p>อีเมล หรือ เบอร์โทร*</p>
+                <input type="text" placeholder="อีเมล หรือ เบอร์โทร *" class="box_from" id="E-mail">
+                <p>รหัสผ่าน*</p>
+                <input type="password" placeholder="รหัสผ่าน *" class="box_from" id="password">
+                <p>ยืนยันรหัสผ่าน*</p>
+                <input type="password" placeholder="ยืนยันรหัสผ่าน *" class="box_from" id="againpassword">
+            </div>
+            <div class="button_from"><button onclick="register()" class="button">สมัครสมาชิก</button></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./register.js"></script>
+    <script src="slide.js"></script>
+</body>
+</html>

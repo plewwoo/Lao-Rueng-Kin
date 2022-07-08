@@ -1,0 +1,37 @@
+<header>
+  <div class="nav-bar">
+    <div class="nav">
+      <div class="dropdown">
+        <a href="/">
+          <button class="brand">
+            <img src="/img/logo.png" />
+          </button>
+        </a>
+      </div>
+    </div>
+
+    <div class="search-container">
+      <form action="/search" method="POST" novalidate>
+        <div class="search-box">
+          <input type="text" placeholder="Search" name="search" />
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </div>
+      </form>
+    </div>
+
+    <div class="menu">
+      <div class="dropdown">
+        <a href="/restaurant/addRestaurant">
+          <button class="dropbtn"><i class="fas fa-store"></i></button>
+        </a>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn"><i class="fas fa-user"></i></button>
+        <div class="dropdown-content">
+          <a href="/profile">Profile</a>
+          <a href="/signinPage">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
